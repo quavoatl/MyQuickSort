@@ -13,6 +13,7 @@ public class Main {
     public static void quickSort(int[] A, int start, int end) {
         int pivot;
         if (start < end) {
+            //recursive functions
             pivot = partition(A, start, end);
             quickSort(A, start, pivot - 1);
             quickSort(A, pivot + 1, end);
