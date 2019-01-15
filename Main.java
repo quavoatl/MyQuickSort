@@ -10,7 +10,6 @@ public class Main {
             System.out.println(A[i]);
         }
     }
-
     public static void quickSort(int[] A, int start, int end) {
         int pivot;
         if (start < end) {
@@ -19,7 +18,6 @@ public class Main {
             quickSort(A, pivot + 1, end);
         }
     }
-
 
     // 7 2 1 6 8 5 3 4
     // 2 1 3 6 8 5 7 4 pIndex= 3
@@ -30,17 +28,14 @@ public class Main {
             if (A[i] <= pivot) {
                 pIndex++;
 
-
                 int temp = A[pIndex];
                 A[pIndex] = A[i];
                 A[i] = temp;
             }
         }
-
         int temp = A[pIndex + 1];
         A[pIndex + 1] = A[end];
         A[end] = temp;
         return pIndex + 1;
     }
-
 }
